@@ -1,0 +1,32 @@
+<!-- 使用布尔值 -->
+<div [ngClass]="{bordered: false}">This is never bordered</div>
+<div [ngClass]="{bordered: true}">This is always bordered</div>
+
+<!-- 使用组件实例的属性 -->
+<div [ngClass]="{bordered: isBordered}">
+    Using object literal. Border {{ isBordered ? "ON" : "OFF" }}
+</div>
+
+<!-- 样式名包含'-' -->
+<div [ngClass]="{'bordered-box': 'false'}">
+    Class names contains dashes must use single quote
+</div>
+
+<!-- 使用样式列表 -->
+<div class="base" [ngClass]="['blue', 'round']" [ngStyle]="{'background-color':username === 'zxc' ? 'green' : 'red' }">
+	This will always have a blue background and round corners
+</div>
+
+<div [ngStyle]="{color: 'white', 'background-color': 'blue'}">
+   Uses fixed white text on blue background
+</div>
+<!-- 设置元素的背景颜色 -->
+<div [style.background-color]="'yellow'">
+  Use fixed yellow background
+</div> 
+<!-- 支持单位: px | em | %-->
+<div>
+   <span [ngStyle]="{color: 'red'}" [style.font-size.rem]="'fontSize'">
+      Red Text
+   </span>
+</div>
