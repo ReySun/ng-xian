@@ -17,6 +17,10 @@ import { FiveDirective } from './directive/five.directive';
 import { NgtplComponent } from './directive/ngtpl/ngtpl.component';
 import { NgtplcontextComponent } from './directive/ngtpl/ngtplcontext.component';
 import { NgtploutletComponent } from './directive/ngtpl/ngtploutlet.component';
+import { FirstFormComponent } from './form/first.component';
+import { SecondFormComponent } from './form/second.component';
+import { ThirdFormComponent } from './form/third.component';
+import { FourFormComponent } from './form/four.component';
 
 @NgModule({
 	declarations: [
@@ -31,7 +35,11 @@ import { NgtploutletComponent } from './directive/ngtpl/ngtploutlet.component';
 		FiveDirective,
 		NgtplComponent,
 		NgtplcontextComponent,
-		NgtploutletComponent
+		NgtploutletComponent,
+		FirstFormComponent,
+		SecondFormComponent,
+		ThirdFormComponent,
+		FourFormComponent
 	],
 	imports: [
 		BrowserModule,
