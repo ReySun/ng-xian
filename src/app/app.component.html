@@ -1,3 +1,24 @@
-<h1>
-    {{title}}
-</h1>
+<h3>output</h3>
+<ul>
+    <li *ngFor="let message of mailService.messages;">
+        {{message.text}}
+    </li>
+</ul>
+<app-output *ngFor="let message of mailService.messages;" [message]="message.text" (update)="onUpdate(message.id, $event.text)">
+</app-output>
+
+<h3>ngclass ngstyle</h3>
+<app-ngclass></app-ngclass>
+
+<h3>http</h3>
+<app-http></app-http>
+
+<h3>directive</h3>
+<p firDirt>Hello, Angular</p>
+<p [secDirt]="'Hello, Semlinker!'">Hello, Angular</p>
+<p [thiDirt]="'Hello, Semlinker!'">Hello, Angular</p>
+<p [fouDirt]="'Hello, Semlinker!'"author="semlinker">Hello, Angular</p>
+<p *fivDirt="true">Hello, Semlinker! fivDirt</p>
+<ngtpl></ngtpl>
+<ngtploutlet></ngtploutlet>
+<ngtplcontext></ngtplcontext>
