@@ -21,6 +21,9 @@ import { FirstFormComponent } from './form/first.component';
 import { SecondFormComponent } from './form/second.component';
 import { ThirdFormComponent } from './form/third.component';
 import { FourFormComponent } from './form/four.component';
+import { FirstPipeComponent } from './pipe/first-pipe.component';
+import { WelcomePipe } from './pipe/welcome.pipe';
+import { RepeatPipe } from './pipe/repeat.pipe';
 
 @NgModule({
 	declarations: [
@@ -39,7 +42,10 @@ import { FourFormComponent } from './form/four.component';
 		FirstFormComponent,
 		SecondFormComponent,
 		ThirdFormComponent,
-		FourFormComponent
+		FourFormComponent,
+		FirstPipeComponent,
+		WelcomePipe,
+		RepeatPipe
 	],
 	imports: [
 		BrowserModule,

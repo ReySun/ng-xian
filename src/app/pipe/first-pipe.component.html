@@ -1,0 +1,46 @@
+<div>
+    <p ngNonBindable>{{ 'Angular' | uppercase }}</p>
+    <p>{{ 'Angular' | uppercase }}</p>
+</div>
+<div>
+    <p ngNonBindable>{{ 'Angular' | lowercase }}</p>
+    <p>{{ 'Angular' | lowercase }}</p>
+    <!-- Output: angular -->
+</div>
+<div>
+    <p ngNonBindable>{{ 3.14159265 | number: '1.4-5' }}</p>
+    <p>{{ 3.14159265 | number: '1.4-4' }}</p>
+    <!-- Output: 3.1416 -->
+</div>
+<div>
+    <p ngNonBindable>{{ today | date: 'shortTime' }}</p>
+    <p>{{ today | date: 'shortTime' }}</p>
+    <!-- Output: 以当前时间为准，输出格式：10:40 AM -->
+</div>
+<div>
+    <p ngNonBindable>{{ { name: 'semlinker' } | json }}</p>
+    <p>{{ { name: 'semlinker' } | json }}</p>
+    <!-- Output: { "name": "semlinker" } -->
+</div>
+<div>
+    <p>管道可以接收任意数量的参数，使用方式是在管道名称后面添加 : 和参数值。如 number: '1.4-4' ，若需要传递多个参数则参数之间用冒号隔开，具体示例如下：</p>
+    <p ngNonBindable>{{ 'semlinker' | slice:0:3 }}</p>
+    <p>{{ 'semlinker' | slice:0:3 }}</p>
+    <!-- Output: sem -->
+</div>
+<div>
+    <p>多个管道连接在一起，组成管道链对数据进行处理。</p>
+    <p ngNonBindable>{{ 'semlinker' | slice:0:3 | uppercase }}</p>
+    <p>{{ 'semlinker' | slice:0:3 | uppercase }}</p>
+    <!-- Output: SEM -->
+</div>
+<div>
+    <p>自定义welcome PIPE</p>
+   <p ngNonBindable>{{ 'semlinker' | welcome }}</p>
+   <p>{{ 'semlinker' | welcome }}</p> <!-- Output: Welcome to semlinker -->
+</div>
+<div>
+    <p>自定义repeat PIPE</p>
+   <p ngNonBindable>{{ 'lo' | repeat:3 }}</p>
+   <p>{{ 'lo' | repeat:3 }}</p> <!-- Output: lololo -->
+</div>
