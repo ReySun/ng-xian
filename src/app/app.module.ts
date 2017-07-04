@@ -24,7 +24,8 @@ import { FourFormComponent } from './form/four.component';
 import { FirstPipeComponent } from './pipe/first-pipe.component';
 import { WelcomePipe } from './pipe/welcome.pipe';
 import { RepeatPipe } from './pipe/repeat.pipe';
-
+import { AnimateComponent } from './animate/animate.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 @NgModule({
 	declarations: [
 		AppComponent,
@@ -45,13 +46,15 @@ import { RepeatPipe } from './pipe/repeat.pipe';
 		FourFormComponent,
 		FirstPipeComponent,
 		WelcomePipe,
-		RepeatPipe
+		RepeatPipe,
+		AnimateComponent
 	],
 	imports: [
 		BrowserModule,
 		FormsModule,
 		HttpModule,
-		RouterModule
+		RouterModule,
+		BrowserAnimationsModule
 	],
 	providers: [MailServiceService],
 	bootstrap: [AppComponent]
