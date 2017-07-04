@@ -8,13 +8,45 @@
     <!-- Output: angular -->
 </div>
 <div>
-    <p ngNonBindable>{{ 3.14159265 | number: '1.4-5' }}</p>
-    <p>{{ 3.14159265 | number: '1.4-4' }}</p>
-    <!-- Output: 3.1416 -->
+    <p>Decimal Pipe</p>
+    <p ngNonBindable>{{ {minIntegerDigits}.{minFractionDigits}-{maxFractionDigits} }}</p>
+    <ol>
+        <li>minIntegerDigits 是最小的整数位数，默认是1。</li>
+        <li>minFractionDigits 表示最小的小数位数，默认是0。</li>
+        <li>maxFractionDigits 表示最大的小数位数，默认是3。</li>
+    </ol>
+    <p>pi (no formatting): {{pi}}</p>
+    <p>pi (.5-5): {{pi | number:'.5-5'}}</p>
+    <p>pi (2.10-10): {{pi | number:'2.10-10'}}</p>
+    <p>pi (.3-3): {{pi | number:'.3-3'}}</p>
+</div>
+<div>
+    <p>Currency Pipe</p>
+    <p ngNonBindable>{{ currency[:currencyCode[:symbolDisplay[:digitInfo]]] }}</p>
+    <p>也就是说在currency管道后用分号分隔不同的属性设置</p>
+    <p>A in USD: {{a | currency:'USD':true}}</p>
+    <p>B in CNY: {{b | currency:'CNY':false:'4.2-2'}}</p>
+</div>
+<div>
+    <p>Percent  Pipe</p>
+    <p>百分数的整数位和小数位的规则也和上面提到的Decimal Pipe和Currency Pipe一致</p>
+    <p>myNum : {{myNum}}</p>
+    <p>myNum : {{myNum | percent}}</p>
+    <p>myNum (3.2-2) : {{myNum | percent:'3.2-2'}}</p>
+</div>
+<div>
+    <p>Json Pipe</p>
+    <p>Without JSON pipe:</p>
+    <pre>{{object}}</pre>
+    <p>With JSON pipe:</p>
+    <pre>{{object | json}}</pre>
 </div>
 <div>
     <p ngNonBindable>{{ today | date: 'shortTime' }}</p>
     <p>{{ today | date: 'shortTime' }}</p>
+    <p>{{ today | date: "MM/dd/yy" }}</p>
+    <p>{{ today | date: "medium" }}</p>
+    <p>{{ today | date: "medium" | trimSpace}}</p>
     <!-- Output: 以当前时间为准，输出格式：10:40 AM -->
 </div>
 <div>
