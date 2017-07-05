@@ -1,3 +1,4 @@
+
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
@@ -33,6 +34,13 @@ import { TrimSpacePipe } from './pipe/trim-space.pipe';
 
 import { AnimateComponent } from './animate/animate.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
+import { ViewChild1Component } from './directive/viewchild/viewchild1.component';
+import { ViewChild2Component } from './directive/viewchild/viewchild2.component';
+import { Alert1Component } from './directive/viewchild/alert1.component';
+import { Alert2Component } from './directive/viewchild/alert2.component';
+import { ViewChildrenComponent } from './directive/viewchild/viewchildren.component';
+
 @NgModule({
 	declarations: [
 		AppComponent,
@@ -56,7 +64,12 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 		WelcomePipe,
 		RepeatPipe,
 		TrimSpacePipe,
-		AnimateComponent
+		AnimateComponent,
+		ViewChild1Component,
+		ViewChild2Component,
+		Alert1Component,
+		Alert2Component,
+		ViewChildrenComponent
 	],
 	imports: [
 		BrowserModule,

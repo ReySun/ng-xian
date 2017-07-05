@@ -5,7 +5,7 @@ import { Input, Component, Output, EventEmitter } from '@angular/core';
 	template: `
 	  <div *ngIf="!hidden">
   	  <div class="backdrop" (click)="hide()"></div>
-	    <div class="modal">
+	    <div class="modal2">
 	      <ng-content></ng-content>
 	      <div>
   	      <button (click)="hide()">{{ ok }}</button>
@@ -14,7 +14,7 @@ import { Input, Component, Output, EventEmitter } from '@angular/core';
 	  </div>
   `,
 	styles: [`
-    .modal {
+    .modal2 {
       position: fixed;
       left: 50%;
       top: 50%;

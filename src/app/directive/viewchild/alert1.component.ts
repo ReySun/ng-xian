@@ -5,7 +5,7 @@ import { Component } from '@angular/core';
 	template: `
 	  <div *ngIf="!hidden">
   	  <div class="backdrop" (click)="hide()"></div>
-	    <div class="modal">
+	    <div class="modal1">
 	      <ng-content></ng-content>
 	      <div>
   	      <button (click)="hide()">OK</button>
@@ -13,8 +13,9 @@ import { Component } from '@angular/core';
       </div>
 	  </div>
   `,
+  // 相当于全局css
 	styles: [`
-    .modal {
+    .modal1 {
       position: fixed;
       left: 50%;
       top: 50%;
